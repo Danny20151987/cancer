@@ -107,6 +107,19 @@ public class ContextUtils {
         isApplicationStarted = isApplicationStarted;
     }
 
+    public static String getConfigProperty(String property) {
+        String value = System.getenv(property);
+        if (StringUtils.isEmpty(value)) {
+            value = getCancerContext().configuration.getProperty(property);
+        }
+
+        if (StringUtils.isEmpty(value)) {
+            value = BootstrapConfigUtil.getProperty(property);
+        }
+
+        return StringUtils.replaceProperty(value, getCancerContext().configuration);
+    }
+
 
     static {
         configDubbo();

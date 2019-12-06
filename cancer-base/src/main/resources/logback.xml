@@ -4,7 +4,7 @@
 	<!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
 	<property name="SYS_NO" value="cancer" />
 	<property name="APP_NAME" value="cancer-core" />
-	<property name="LOG_HOME" value="/Users/macbookpro/Desktop/logs/cancer/" />
+	<property name="LOG_HOME" value="/Users/macbookpro/Desktop/logs/cancer" />
 
 
 	<!--<define  name="process" class="ch.qos.logback.classic.LogbackProcess" />-->
@@ -49,9 +49,9 @@
 			<totalSizeCap>${TOTAL_MAX_SIZE}</totalSizeCap>
 		</rollingPolicy>
 		<Encoding>${FILE_CHARSET}</Encoding>
-		<!--<layout class="ch.qos.logback.classic.PatternEncryptionLayout">
+		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>${COMMUNICATION_MSG}</pattern>
-		</layout>-->
+		</layout>
 	</appender>
 	<appender name="COMMUNICATION_FILE" class="ch.qos.logback.classic.AsyncAppender">
 		<!-- 不丢失日志，默认的，如果队列的80%已满，则会丢丢弃TRACE、DEBUG、INFO级别的日志 -->
@@ -147,9 +147,9 @@
 			<totalSizeCap>${TOTAL_MAX_SIZE}</totalSizeCap>
 		</rollingPolicy>
 		<Encoding>${FILE_CHARSET}</Encoding>
-		<!--<layout class="ch.qos.logback.classic.PatternEncryptionLayout">
+		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>${LOGGER_MSG}</pattern>
-		</layout>-->
+		</layout>
 	</appender>
 
 	<logger name="org.springframework" level="ERROR" />
@@ -189,5 +189,6 @@
 	<root level="Debug">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="COMMUNICATION_FILE" />
+		<appender-ref ref="FILE_ERROR" />
 	</root>
 </configuration>

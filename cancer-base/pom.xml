@@ -5,7 +5,7 @@
     <parent>
         <artifactId>cancer-parent</artifactId>
         <groupId>com.constellation.cancer</groupId>
-        <version>1.0</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
