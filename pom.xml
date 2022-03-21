@@ -21,7 +21,7 @@
         <logback-version>1.2.3</logback-version>
         <log4j-version>1.2.17</log4j-version>
         <spring-version>5.1.6.RELEASE</spring-version>
-        <dubbo-version>2.6.6</dubbo-version>
+        <dubbo-version>2.6.9</dubbo-version>
         <netty-version>4.1.39.Final</netty-version>
         <zookeeper-version>3.4.9</zookeeper-version>
         <curator-version>4.0.1</curator-version>
